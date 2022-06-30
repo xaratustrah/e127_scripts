@@ -30,7 +30,7 @@ def fit_and_plot(filename):
 
     xx, yy, zz = iq.get_spectrogram(nframes=nframes, lframes=lframes)
 
-    xa, ya, za = iq.get_averaged_spectrum(
+    xa, ya, za = get_averaged_spectrogram(
         xx[200:800], yy[200:800], zz[200:800], 10)
     delta_t = float(ya[2, :1] - ya[1, :1])
 
